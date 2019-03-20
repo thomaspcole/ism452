@@ -13,11 +13,11 @@ else
 fi
 
 echo "Building Image..."
-docker build -t ism452 .
+docker-compose build
 echo "Done!"
 
 echo "Running container. Press CTRL+C to exit"
-docker run -p 80:80 -v /home/$USER/ism452/src/:/var/www/html ism452
+docker-compose up
 
 echo "Goodbye!"
 exit 0

@@ -84,6 +84,18 @@
     <br>
     <?php
     echo 'Current PHP version: ' . phpversion();
+    echo "<br>";
+
+    $servername = "172.17.0.1";
+    $username = "webuser";
+    $userpass = "webpass";
+
+    $conn = new mysqli($servername, $username, $userpass);
+
+    if($conn->connect_error){
+      die("Connection Failed" . $conn->connect_error);
+    }
+    echo "Connected to db!"
     ?>
     <br>
 

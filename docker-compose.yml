@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    command: mysqld --user=root
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: ism452
+      MYSQL_USER: webuser
+      MYSQL_PASSWORD: webpass
+    volumes:
+      - ./sql/createTable.sql:/docker-entrypoint-initdb.d/createTable.sql
+    ports:
+      - "3306:3306"
+  web:
+    build:
+      context: .
+      dockerfile: DockerfilePHP
+    container_name: ism452_phpweb
+    depends_on:
+      - db
+    volumes:
+      - ./src/:/var/www/html/
+    ports:
+      - "80:80"
+    stdin_open: true
+    tty: true
