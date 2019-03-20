@@ -19,5 +19,6 @@ echo "Done!"
 echo "Running container. Press CTRL+C to exit"
 docker-compose up
 
+docker-compose down
 echo "Goodbye!"
 exit 0

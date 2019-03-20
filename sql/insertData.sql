@@ -1,3 +1,14 @@
-INSERT INTO testTab (first_name, last_name, id) VALUES ('John', 'Doe', 1);
-INSERT INTO testTab (first_name, last_name, id) VALUES ('Jane', 'Doe', 2);
-INSERT INTO testTab (first_name, last_name, id) VALUES ('Thomas', 'Cole', 3);
+INSERT INTO Customer
+VALUES (
+  0000000001,
+  "Doe",
+  "John",
+  1234567890,
+  "123 Main St.",
+  "Anywhere",
+  "North Carolina",
+  "US",
+  12345,
+  "johndoe",
+  "fakepass"
+)

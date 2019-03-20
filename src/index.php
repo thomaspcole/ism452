@@ -37,71 +37,68 @@
 
         <!-- Login Button  -->
         <ul class="nav navbar-nav navbar-right">
-          <li><button class="btn btn-success navbar-btn">Login <i class="fas fa-sign-in-alt"></i></button></li>
+          <li><a class="btn btn-success navbar-btn" href="login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
         </ul>
       </div>
     </nav>
 
-    <br>
+    <!-- Container -->
+    <div class="container">
+      <div class="row">
 
-    <!-- Homepage Carousel -->
-    <div id="carousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-        <li data-target="#carousel" data-slide-to="3"></li>
-      </ol>
+        <!-- Homepage Carousel -->
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
+          </ol>
 
-      <!-- Slides -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/carousel/c1.png" class="d-block w-100" alt="c1">
-        </div>
-        <div class="carousel-item">
-          <img src="img/carousel/c1.png" class="d-block w-100" alt="c2">
-        </div>
-        <div class="carousel-item">
-          <img src="img/carousel/c1.png" class="d-block w-100" alt="c3">
-        </div>
-        <div class="carousel-item">
-          <img src="img/carousel/c1.png" class="d-block w-100" alt="c4">
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/carousel/c1.png" class="d-block w-100" alt="c1">
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousel/c2.png" class="d-block w-100" alt="c2">
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousel/c3.png" class="d-block w-100" alt="c3">
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousel/c4.png" class="d-block w-100" alt="c4">
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
 
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <!-- Main content -->
+      <div class="row">
+        <h3>Content</h3>
+      </div>
     </div>
 
     <br>
     <?php
     echo 'Current PHP version: ' . phpversion();
-    echo "<br>";
-
-    $servername = "172.17.0.1";
-    $username = "webuser";
-    $userpass = "webpass";
-
-    $conn = new mysqli($servername, $username, $userpass);
-
-    if($conn->connect_error){
-      die("Connection Failed" . $conn->connect_error);
-    }
-    echo "Connected to db!"
     ?>
     <br>
 
   </body>
 
-  <footer>
+  <footer class="fixed-bottom">
     <hr>
     <address class="">
       <strong>Cupcake Confections LLC</strong>
@@ -111,11 +108,6 @@
       Anywhere, USA 12345
       <br>
       Phone: (123) 456-7890
-    </address>
-    <address class="">
-      <strong>Web Admin</strong>
-      <br>
-      <a href="#">webadmin@ccllc.com</a>
     </address>
   </footer>
 </html>

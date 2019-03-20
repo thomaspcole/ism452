@@ -12,6 +12,7 @@ services:
       MYSQL_PASSWORD: webpass
     volumes:
       - ./sql/createTable.sql:/docker-entrypoint-initdb.d/createTable.sql
+      - ./sql/insertData.sql:/docker-entrypoint-initdb.d/insertData.sql
     ports:
       - "3306:3306"
   web:
