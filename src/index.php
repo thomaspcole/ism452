@@ -36,9 +36,18 @@
         </ul>
 
         <!-- Login Button  -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="btn btn-success navbar-btn" href="login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
-        </ul>
+        <?php
+          if(!isset($_COOKIE["user"])){
+            echo '<ul class="nav navbar-nav navbar-right">
+                    <li><a class="btn btn-success navbar-btn" href="login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                  </ul>';
+          } else {
+            echo '<ul class="nav navbar-nav navbar-right">
+                    <li><a class="btn btn-success navbar-btn" href="backend/logout.php">Welcome ' . $_COOKIE["user"] . ' <i class="fas fa-user"></i></a></li>
+                  </ul>';
+          }
+        ?>
+
       </div>
     </nav>
 
@@ -84,17 +93,14 @@
         </div>
       </div>
 
+      <br>
+
       <!-- Main content -->
       <div class="row">
         <h3>Content</h3>
       </div>
     </div>
 
-    <br>
-    <?php
-    echo 'Current PHP version: ' . phpversion();
-    ?>
-    <br>
 
   </body>
 

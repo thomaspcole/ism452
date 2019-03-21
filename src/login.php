@@ -49,6 +49,16 @@
           <h3>Login</h3>
           <br>
 
+          <!-- Creates a notification if there is a fail message in the URL -->
+          <?php
+            $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+            if(strpos($url, 'authFail')){
+              echo '<div class="alert alert-danger" role="alert">
+                      Invalid Username or Password
+                    </div>';
+            }
+          ?>
+
           <!-- Returning User login -->
           <form action="backend/submitLogin.php" method="post">
             <div class="form-group">
