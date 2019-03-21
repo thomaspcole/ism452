@@ -76,17 +76,7 @@
 
           <!-- New user form -->
           <form action="#" method="post">
-            <!-- Username and pass -->
-            <div class="form-row">
-              <div class="form-group col">
-                <input type="text" class="form-control" id="signupUName" placeholder="Username" required>
-              </div>
-              <div class="form-group col">
-                <input type="password" class="form-control" id="signupPass" placeholder="Password" required>
-              </div>
-            </div>
-
-            <!-- Name and phone -->
+            <!-- Name -->
             <div class="form-row">
               <div class="form-group col">
                 <input type="text" class="form-control" placeholder="First name" required>
@@ -94,27 +84,75 @@
               <div class="form-group col">
                 <input type="text" class="form-control" placeholder="Last name" required>
               </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-row">
               <div class="form-group col">
                 <input type="tel" class="form-control" placeholder="Phone Number" required>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="form-row">
+              <div class="form-group col">
+                <input type="text" class="form-control" placeholder="Address" required>
               </div>
             </div>
 
             <!-- Location information -->
             <div class="form-row">
               <div class="form-group col">
-                <input type="text" class="form-control" placeholder="Address" required>
-              </div>
-              <div class="form-group col">
                 <input type="text" class="form-control" placeholder="City" required>
               </div>
               <div class="form-group col">
                 <input type="text" class="form-control" placeholder="State" required>
               </div>
+            </div>
+
+            <div class="form-row">
               <div class="form-group col">
                 <input type="text" class="form-control" placeholder="Country" required>
               </div>
+              <div class="form-group col">
+                <input type="text" class="form-control" placeholder="Zip Code" pattern="[0-9]*" required>
+              </div>
             </div>
+
+            <!-- Password -->
+            <div class="form-row">
+              <div class="form-group col">
+                <input type="password" class="form-control" id="signupPass" placeholder="Password" required>
+              </div>
+            </div>
+
+            <!-- Password Confirm -->
+            <div class="form-row">
+              <div class="form-group col">
+                <input type="password" class="form-control" id="signupPassConfirm" placeholder="Re-type Password" required>
+              </div>
+            </div>
+
             <button type="submit" class="btn btn-primary">Sign up</button>
+          </form>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col">
+          <h3>Operator Login</h3>
+          <br>
+          <!-- Operator login -->
+          <form action="backend/operatorLogin.php" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" name="loginUName" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="loginPass" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
           </form>
         </div>
       </div>
