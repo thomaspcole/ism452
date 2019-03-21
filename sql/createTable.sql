@@ -11,3 +11,11 @@ CREATE TABLE Customer (
   cust_username varchar(30) NOT NULL,
   cust_password varchar(32) NOT NULL
 );
+
+CREATE TABLE productTest (
+  prod_id int(10) NOT NULL AUTO_INCREMENT,
+  name varchar(25) NOT NULL,
+  description varchar(100) NOT NULL,
+  price decimal(8,2) NOT NULL,
+  PRIMARY KEY (prod_id)
+);

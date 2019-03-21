@@ -1,8 +1,17 @@
 body{
+  background-color: #f4e1d2;
+}
 
+.navbar-custom{
+  background-color: #b2b2b2;
+}
+
+.container-fluid{
+  /* Forces max width for container fluid to 80% of the screen */
+  max-width: 80% !important;
 }
 
 .carousel{
-  width: 100%;
+  width: 80%;
   margin: auto;
 }

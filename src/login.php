@@ -31,7 +31,7 @@
         <ul class="nav navbar-nav mr-auto">
           <!-- Navigation links -->
           <li><a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a></li>
-          <li><a class="nav-item nav-link" href="#">Products</a></li>
+          <li><a class="nav-item nav-link" href="products.php">Products</a></li>
           <li><a class="nav-item nav-link" href="#">Orders</a></li>
         </ul>
 
@@ -43,7 +43,7 @@
     </nav>
 
     <br>
-    <div class="container">
+    <div class="container shadow p-3 mb-5 bg-light rounded">
       <div class="row">
         <div class="col">
           <h3>Login</h3>
@@ -160,17 +160,4 @@
 
 
   </body>
-
-  <footer class="fixed-bottom">
-    <hr>
-    <address class="">
-      <strong>Cupcake Confections LLC</strong>
-      <br>
-      123 Example St, Suite 101
-      <br>
-      Anywhere, USA 12345
-      <br>
-      Phone: (123) 456-7890
-    </address>
-  </footer>
 </html>

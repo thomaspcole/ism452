@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TEMPLATE PAGE CHANGE ME</title>
+    <title>Products - Cupcake Confections LLC</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -36,29 +36,68 @@
         </ul>
 
         <!-- Login Button  -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><button class="btn btn-success navbar-btn">Login <i class="fas fa-sign-in-alt"></i></button></li>
-        </ul>
+        <?php
+          if(!isset($_COOKIE["user"])){
+            echo '<ul class="nav navbar-nav navbar-right">
+                    <li><a class="btn btn-success navbar-btn" href="login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                  </ul>';
+          } else {
+            echo '<ul class="nav navbar-nav navbar-right">
+                    <li><a class="btn btn-success navbar-btn" href="backend/logout.php">Welcome ' . $_COOKIE["user"] . ' <i class="fas fa-user"></i></a></li>
+                  </ul>';
+          }
+        ?>
       </div>
     </nav>
 
-  </body>
+    <br>
+    <div class="container-fluid shadow p-3 mb-5 bg-light rounded">
 
-  <footer>
-    <hr>
-    <address class="">
-      <strong>Cupcake Confections LLC</strong>
-      <br>
-      123 Example St, Suite 101
-      <br>
-      Anywhere, USA 12345
-      <br>
-      Phone: (123) 456-7890
-    </address>
-    <address class="">
-      <strong>Web Admin</strong>
-      <br>
-      <a href="#">webadmin@ccllc.com</a>
-    </address>
-  </footer>
+        <!-- Product List -->
+        <?php
+        $servername = "172.17.0.1";
+        $username = "webuser";
+        $userpass = "webpass";
+        $dbname = "ism452";
+
+        $conn = new mysqli($servername, $username, $userpass, $dbname);
+
+        if($conn->connect_error){
+          die("Connection Failed" . $conn->connect_error);
+        }
+
+        $sql="select name,description,price from productTest";
+
+        $result = $conn->query($sql);
+        $conn->close();
+
+        if ($result->num_rows > 0) {
+          $counter = 0;
+          while($row = $result->fetch_assoc()) {
+
+            if ($GLOBALS['counter'] == 0) {
+              echo '<div class="row">
+                      <div class="card-deck mx-auto">';
+            }
+
+            echo '<div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5>'.$row["name"].'</h5>
+                      <p>'.$row["description"].'</p>
+                      <p>$'.$row["price"].'</p>
+                    </div>
+                  </div>';
+
+            if ($GLOBALS['counter'] == 3) {
+              echo '</div></div><br>';
+              $GLOBALS['counter'] = 0;
+            } else {
+              $GLOBALS['counter'] +=1;
+            }
+          }
+        }
+        ?>
+    </div>
+
+  </body>
 </html>
