@@ -28,10 +28,10 @@ if ($result->num_rows == 1) {
 
     //If there is a result then we have a successful login.
     //I know this is no where near secure but it should be functional
-    setcookie("mgmt", $user, time()+86400, "/");
+    setcookie("emp", $user, time()+86400, "/");
 
     //run script to redirect to the index page
-    echo '<script type="text/javascript">window.location.href="../manage.php"</script>';
+    echo '<script type="text/javascript">window.location.href="../manage/manage.php"</script>';
 } else {
     echo '<script type="text/javascript">window.location.href="../login.php?authFail"</script>';
 }

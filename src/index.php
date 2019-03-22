@@ -33,6 +33,11 @@
           <li><a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a></li>
           <li><a class="nav-item nav-link" href="products.php">Products</a></li>
           <li><a class="nav-item nav-link" href="#">Orders</a></li>
+
+          <?php if(isset($_COOKIE["emp"])){
+            echo '<li><a class="nav-item nav-link" href="manage/manage.php">Manage</a></li>';
+          }?>
+
         </ul>
 
         <!-- Login Button  -->

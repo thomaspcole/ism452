@@ -1,5 +1,5 @@
 <?php
-setcookie("user", "", time()+3600, "/");
-setcookie("mgmt", "", time()+3600, "/");
+setcookie("user", "", time(), "/");
+setcookie("emp", "", time(), "/");
 echo '<script type="text/javascript">window.location.href="../index.php"</script>';
 ?>

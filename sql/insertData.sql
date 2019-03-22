@@ -1,6 +1,5 @@
 INSERT INTO Customer
 VALUES (
-  0000000001,
   "Doe",
   "John",
   1234567890,

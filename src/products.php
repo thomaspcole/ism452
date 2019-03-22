@@ -30,8 +30,8 @@
       <div class="collapse navbar-collapse" id="ccnav">
         <ul class="nav navbar-nav mr-auto">
           <!-- Navigation links -->
-          <li><a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a></li>
-          <li><a class="nav-item nav-link" href="#">Products</a></li>
+          <li><a class="nav-item nav-link" href="index.php">Home <span class="sr-only">(current)</span></a></li>
+          <li><a class="nav-item nav-link active" href="#">Products</a></li>
           <li><a class="nav-item nav-link" href="#">Orders</a></li>
         </ul>
 
