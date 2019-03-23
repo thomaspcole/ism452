@@ -31,7 +31,7 @@
       </a>
 
       <ul class="nav navbar-nav ml-auto">
-        <li><a class="btn btn-success navbar-btn" href="../backend/logout.php">Logout <i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a class="btn btn-info navbar-btn" href="../backend/logout.php">Logout <i class="fas fa-sign-in-alt"></i></a></li>
       </ul>
     </nav>
 

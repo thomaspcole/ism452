@@ -1,23 +1,8 @@
 <?php
-
-$servername = "172.17.0.1";
-$username = "webuser";
-$userpass = "webpass";
-$dbname = "ism452";
-
-$conn = new mysqli($servername, $username, $userpass, $dbname);
-
-if($conn->connect_error){
-  die("Connection Failed" . $conn->connect_error);
-}
-
-#echo "Connected to db! User: " . $username;
-
+include 'db.php';
+$db = new db;
 $sql="SELECT first_name FROM Customer WHERE cust_username='".$_POST['loginUName']."' AND cust_password='".$_POST['loginPass']."'";
-// echo $sql . "<br>";
-
-$result = $conn->query($sql);
-$conn->close();
+$result = $db->queryDatabase($sql);
 
 if ($result->num_rows == 1) {
     $user = "";

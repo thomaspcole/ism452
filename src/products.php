@@ -32,44 +32,31 @@
           <!-- Navigation links -->
           <li><a class="nav-item nav-link" href="index.php">Home <span class="sr-only">(current)</span></a></li>
           <li><a class="nav-item nav-link active" href="#">Products</a></li>
-          <li><a class="nav-item nav-link" href="#">Orders</a></li>
+          <li><a class="nav-item nav-link" href="orders.php">Orders</a></li>
+          <?php include 'backend/showManageLink.php'; ?>
+
         </ul>
 
-        <!-- Login Button  -->
         <?php
-          if(!isset($_COOKIE["user"])){
-            echo '<ul class="nav navbar-nav navbar-right">
-                    <li><a class="btn btn-success navbar-btn" href="login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
-                  </ul>';
-          } else {
-            echo '<ul class="nav navbar-nav navbar-right">
-                    <li><a class="btn btn-success navbar-btn" href="backend/logout.php">Welcome ' . $_COOKIE["user"] . ' <i class="fas fa-user"></i></a></li>
-                  </ul>';
-          }
+          include 'backend/loginStatus.php';
+          $ls = new loginStatus;
+          $ls->getLoginButton();
         ?>
       </div>
     </nav>
 
     <br>
-    <div class="container-fluid shadow p-3 mb-5 bg-light rounded">
+    <div class="container-fluid shadow-lg p-3 mb-5 bg-light rounded">
 
         <!-- Product List -->
         <?php
-        $servername = "172.17.0.1";
-        $username = "webuser";
-        $userpass = "webpass";
-        $dbname = "ism452";
 
-        $conn = new mysqli($servername, $username, $userpass, $dbname);
+        include 'backend/db.php';
 
-        if($conn->connect_error){
-          die("Connection Failed" . $conn->connect_error);
-        }
+        $db = new db;
+        $sql="SELECT name,description,price FROM productTest";
+        $result = $db->queryDatabase($sql);
 
-        $sql="select name,description,price from productTest";
-
-        $result = $conn->query($sql);
-        $conn->close();
 
         if ($result->num_rows > 0) {
           $counter = 0;
@@ -80,7 +67,7 @@
                       <div class="card-deck mx-auto">';
             }
 
-            echo '<div class="card" style="width: 18rem;">
+            echo '<div class="card shadow" style="width: 18rem;">
                     <div class="card-body">
                       <h5>'.$row["name"].'</h5>
                       <p>'.$row["description"].'</p>

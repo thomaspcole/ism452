@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TEMPLATE PAGE CHANGE ME</title>
+    <title>Orders - Cupcake Confections LLC</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
       <div class="collapse navbar-collapse" id="ccnav">
         <ul class="nav navbar-nav mr-auto">
           <!-- Navigation links -->
-          <li><a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a></li>
-          <li><a class="nav-item nav-link" href="#">Products</a></li>
-          <li><a class="nav-item nav-link" href="#">Orders</a></li>
+          <li><a class="nav-item nav-link" href="index.php">Home <span class="sr-only">(current)</span></a></li>
+          <li><a class="nav-item nav-link" href="products.php">Products</a></li>
+          <li><a class="nav-item nav-link active" href="#">Orders</a></li>
           <?php include 'backend/showManageLink.php'; ?>
 
         </ul>
@@ -47,7 +47,13 @@
 
     <br>
     <div class="container shadow-lg p-3 mb-5 bg-light rounded">
+      <?php
+        if($GLOBALS['ls']->isLoggedIn() == false){
+          //echo "You are not logged in!";
+        }
+      ?>
 
+      <h5>To view your current/past orders please log in.</h5>
     </div>
 
   </body>

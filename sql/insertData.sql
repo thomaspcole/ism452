@@ -1,4 +1,4 @@
-INSERT INTO Customer
+INSERT INTO Customer(last_name, first_name, phone_number, address, city, state, country, zip_code, cust_username, cust_password)
 VALUES (
   "Doe",
   "John",

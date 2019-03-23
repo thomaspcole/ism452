@@ -32,25 +32,16 @@
           <!-- Navigation links -->
           <li><a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a></li>
           <li><a class="nav-item nav-link" href="products.php">Products</a></li>
-          <li><a class="nav-item nav-link" href="#">Orders</a></li>
+          <li><a class="nav-item nav-link" href="orders.php">Orders</a></li>
 
-          <?php if(isset($_COOKIE["emp"])){
-            echo '<li><a class="nav-item nav-link" href="manage/manage.php">Manage</a></li>';
-          }?>
+          <?php include 'backend/showManageLink.php'; ?>
 
         </ul>
 
-        <!-- Login Button  -->
         <?php
-          if(!isset($_COOKIE["user"])){
-            echo '<ul class="nav navbar-nav navbar-right">
-                    <li><a class="btn btn-success navbar-btn" href="login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
-                  </ul>';
-          } else {
-            echo '<ul class="nav navbar-nav navbar-right">
-                    <li><a class="btn btn-success navbar-btn" href="backend/logout.php">Welcome ' . $_COOKIE["user"] . ' <i class="fas fa-user"></i></a></li>
-                  </ul>';
-          }
+          include 'backend/loginStatus.php';
+          $ls = new loginStatus;
+          $ls->getLoginButton();
         ?>
 
       </div>
@@ -59,7 +50,7 @@
     <br>
 
     <!-- Container -->
-    <div class="container-fluid shadow p-3 mb-5 bg-light rounded">
+    <div class="container-fluid shadow-lg p-3 mb-5 bg-light rounded">
       <div class="row">
 
         <!-- Homepage Carousel -->

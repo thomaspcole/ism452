@@ -43,7 +43,7 @@
     </nav>
 
     <br>
-    <div class="container shadow p-3 mb-5 bg-light rounded">
+    <div class="container shadow-lg p-3 mb-5 bg-light rounded">
       <div class="row">
         <div class="col">
           <h3>Login</h3>
