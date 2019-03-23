@@ -54,7 +54,7 @@
               <a class="btn btn-outline-primary btn-sm" href="#">Inventory</a>
               <br>
               <br>
-              <a class="btn btn-outline-primary btn-sm" href="#">Shipping/Recieving</a>
+              <a class="btn btn-outline-primary btn-sm" href="#">Shipping/Receiving</a>
               <br>
               <br>
 
