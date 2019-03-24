@@ -46,7 +46,7 @@
 
         <div class="col-sm-10">
           <div class="container-fluid px-0 h-100 bg-light rounded" style="max-width:100% !important;">
-            <h5>Overview</h5>
+            <h5>Inventory</h5>
           </div>
 
         </div>
