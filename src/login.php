@@ -13,34 +13,9 @@
 
   <body>
 
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-
-      <!-- Icon and Name -->
-      <a class="navbar-brand" href="index.php">
-        <img src="img/logoWhite.svg" width="30" height="30" alt="logo">
-        CCLLC
-      </a>
-
-      <!-- collapse button. Only displayed when nav bar no longer fits on screen -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ccnav" aria-controls="ccnav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="ccnav">
-        <ul class="nav navbar-nav mr-auto">
-          <!-- Navigation links -->
-          <li><a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a></li>
-          <li><a class="nav-item nav-link" href="products.php">Products</a></li>
-          <li><a class="nav-item nav-link" href="orders.php">Orders</a></li>
-        </ul>
-
-        <!-- Login Button  -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><button class="btn btn-success navbar-btn">Login <i class="fas fa-sign-in-alt"></i></button></li>
-        </ul>
-      </div>
-    </nav>
+    <?php
+    include 'backend/navbar.php';
+    ?>
 
     <br>
     <div class="container shadow-lg p-3 mb-5 bg-light rounded">

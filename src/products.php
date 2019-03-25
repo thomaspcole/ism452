@@ -13,37 +13,9 @@
 
   <body>
 
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-
-      <!-- Icon and Name -->
-      <a class="navbar-brand" href="index.php">
-        <img src="img/logoWhite.svg" width="30" height="30" alt="logo">
-        CCLLC
-      </a>
-
-      <!-- collapse button. Only displayed when nav bar no longer fits on screen -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ccnav" aria-controls="ccnav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="ccnav">
-        <ul class="nav navbar-nav mr-auto">
-          <!-- Navigation links -->
-          <li><a class="nav-item nav-link" href="index.php">Home <span class="sr-only">(current)</span></a></li>
-          <li><a class="nav-item nav-link active" href="#">Products</a></li>
-          <li><a class="nav-item nav-link" href="orders.php">Orders</a></li>
-          <?php include 'backend/showManageLink.php'; ?>
-
-        </ul>
-
-        <?php
-          include 'backend/loginStatus.php';
-          $ls = new loginStatus;
-          $ls->getLoginButton();
-        ?>
-      </div>
-    </nav>
+    <?php
+    include 'backend/navbar.php';
+    ?>
 
     <br>
     <div class="container-fluid shadow-lg p-3 mb-5 bg-light rounded">
@@ -67,7 +39,7 @@
                       <div class="card-deck mx-auto">';
             }
 
-            echo '<div class="card shadow" style="width: 18rem;">
+            echo '<div class="card shadow" style="width: 14rem;">
                     <img src="img/CardPlaceholder.png" class="card-img-top"></img>
                     <div class="card-body">
                       <h5>'.$row["name"].'</h5>
