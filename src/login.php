@@ -32,7 +32,7 @@
           <!-- Navigation links -->
           <li><a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a></li>
           <li><a class="nav-item nav-link" href="products.php">Products</a></li>
-          <li><a class="nav-item nav-link" href="#">Orders</a></li>
+          <li><a class="nav-item nav-link" href="orders.php">Orders</a></li>
         </ul>
 
         <!-- Login Button  -->

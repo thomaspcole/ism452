@@ -95,7 +95,7 @@
 
       <!-- Main content -->
       <div class="row mx-auto">
-        <h3>Content</h3>
+        <h3>This is a site in progress</h3>
       </div>
     </div>
 

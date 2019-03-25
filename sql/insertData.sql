@@ -88,3 +88,31 @@ VALUES(
   "This is a fake item. It is not for sale.",
   89.99
 );
+
+INSERT INTO orderTest (description, quantity, price)
+VALUES(
+  "Test Order 1",
+  1,
+  1.99
+);
+
+INSERT INTO orderTest (description, quantity, price)
+VALUES(
+  "Test Order 2",
+  3,
+  5.99
+);
+
+INSERT INTO orderTest (description, quantity, price)
+VALUES(
+  "Test Order 3",
+  5,
+  1.99
+);
+
+INSERT INTO orderTest (description, quantity, price)
+VALUES(
+  "Test Order 4",
+  1,
+  1.99
+);

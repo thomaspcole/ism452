@@ -46,14 +46,48 @@
     </nav>
 
     <br>
-    <div class="container shadow-lg p-3 mb-5 bg-light rounded">
+    <div class="container-fluid shadow-lg p-3 mb-5 bg-light rounded">
       <?php
         if($GLOBALS['ls']->isLoggedIn() == false){
-          //echo "You are not logged in!";
+          echo '<h5>To view your current/past orders please log in.</h5>';
+          die();
         }
       ?>
 
-      <h5>To view your current/past orders please log in.</h5>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Order #</th>
+            <th scope="col">Description</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">View Order</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          include 'backend/db.php';
+          $dbConn = new db;
+          $sql = "SELECT * FROM orderTest";
+          $result = $dbConn->queryDatabase($sql);
+
+          if ($result->num_rows > 0) {
+            $counter = 0;
+            while($row = $result->fetch_assoc()) {
+              echo '<tr>
+                      <th scope="row">'.$row["order_id"].'</th>
+                      <td>'.$row["description"].'</td>
+                      <td>'.$row["quantity"].'</td>
+                      <td>$'.$row["price"].'</td>
+                      <td><a class="btn btn-secondary" href="#">More Details</a></td>
+                    </tr>';
+            }
+          }
+          ?>
+
+        </tbody>
+      </table>
+
     </div>
 
   </body>

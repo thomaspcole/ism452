@@ -68,6 +68,7 @@
             }
 
             echo '<div class="card shadow" style="width: 18rem;">
+                    <img src="img/CardPlaceholder.png" class="card-img-top"></img>
                     <div class="card-body">
                       <h5>'.$row["name"].'</h5>
                       <p>'.$row["description"].'</p>

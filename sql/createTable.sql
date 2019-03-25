@@ -20,3 +20,11 @@ CREATE TABLE productTest (
   price decimal(8,2) NOT NULL,
   PRIMARY KEY (prod_id)
 );
+
+CREATE TABLE orderTest (
+  order_id int(10) NOT NULL AUTO_INCREMENT,
+  description varchar(100) NOT NULL,
+  quantity int(10) NOT NULL,
+  price decimal(8,2) NOT NULL,
+  PRIMARY KEY (order_id)
+);
