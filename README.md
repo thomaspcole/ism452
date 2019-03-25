@@ -7,7 +7,7 @@ ISM 452 Team Titan Final Project
 Make sure Docker is installed and you have the ability to install and run images.
 
 ### Windows:
-WIP
+Working on it
 
 ### MacOS:
 Have Docker for MacOS running and run `./buildAndRun.sh`
