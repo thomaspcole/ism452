@@ -2,6 +2,10 @@ body{
   background-color: #f4e1d2;
 }
 
+canvas{
+  border-radius: 10px;
+}
+
 .navbar-custom{
   background-color: #b2b2b2;
 }
@@ -14,4 +18,8 @@ body{
 .carousel{
   width: 80%;
   margin: auto;
+}
+
+.carousel-item{
+  max-height: 400px;
 }

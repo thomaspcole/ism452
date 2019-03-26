@@ -89,6 +89,13 @@ VALUES(
   89.99
 );
 
+INSERT INTO productTest (name, description, price)
+VALUES(
+  "Test Item 12",
+  "This is a fake item. It is not for sale.",
+  89.99
+);
+
 INSERT INTO orderTest (description, quantity, price)
 VALUES(
   "Test Order 1",

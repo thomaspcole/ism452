@@ -65,8 +65,34 @@
       <br>
 
       <!-- Main content -->
-      <div class="row mx-auto">
-        <h3>This is a site in progress</h3>
+      <div class="row">
+        <div class="col">
+          <h2 style="text-align: center">Welcome to Cupcake Confections!</h2>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col">
+          <h3>Our Product</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>We have set out to make the finest cupcakes around. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas est tortor, facilisis quis consectetur et, viverra in ex. Maecenas vel dictum augue. Mauris feugiat imperdiet ornare. Aenean venenatis tortor vel velit tempor, a ornare ipsum bibendum. Nam cursus faucibus nulla, sit amet tincidunt nulla porttitor at. Duis imperdiet fringilla magna. Nam ut maximus mi, vel molestie nisl.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h3>About us:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>Cupcake confections was founded in 2019 with the goal of providing customers with the best tasting cupcakes you can order online. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas est tortor, facilisis quis consectetur et, viverra in ex. Maecenas vel dictum augue. Mauris feugiat imperdiet ornare. Aenean venenatis tortor vel velit tempor, a ornare ipsum bibendum. Nam cursus faucibus nulla, sit amet tincidunt nulla porttitor at. Duis imperdiet fringilla magna. Nam ut maximus mi, vel molestie nisl. Duis sed nulla dapibus, placerat tellus a, semper tortor. Nunc vitae sapien diam. Praesent pellentesque placerat elementum. Cras eu pellentesque leo, in imperdiet tortor. Praesent blandit maximus velit condimentum elementum. Suspendisse lacinia dolor nec nulla mollis, vitae suscipit tortor posuere. Etiam sed tincidunt ipsum, nec consectetur nibh. Proin imperdiet sem id odio fermentum, sed dictum arcu suscipit. </p>
+        </div>
       </div>
     </div>
 

@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="/css/master.css">
     <link rel="icon" href="img/logoBlack.svg" type="image/svg" sizes="any">
 
+    <?php include 'loadP5.php'; ?>
+    <script src="../js/overviewGraphs.js"></script>
+
   </head>
 
   <body>
@@ -37,7 +40,42 @@
 
         <div class="col-sm-10">
           <div class="container-fluid px-0 h-100 bg-light rounded" style="max-width:100% !important;">
-            <h5>Overview</h5>
+            <br>
+            <div class="row">
+                <div class="col-2">
+                  <h3 style="text-align: center">Inventory</h3>
+                </div>
+                <div class="col-3" style="text-align: center">
+                  <figure class="figure">
+                    <div id="inventoryOnHandCanvas"></div>
+                    <figcaption class="figure-caption text-center">On hand supply levels.</figcaption>
+                  </figure>
+                </div>
+                <div class="col-3" style="text-align: center">
+                  <figure class="figure">
+                    <div id="finishedInventory"></div>
+                    <figcaption class="figure-caption text-center">Completed/Ready to ship orders.</figcaption>
+                  </figure>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-2">
+                  <h3 style="text-align: center">Orders</h3>
+                </div>
+                <div class="col-3" style="text-align: center">
+                  <figure class="figure">
+                    <div id="orderQueue"></div>
+                    <figcaption class="figure-caption text-center">Order Queue</figcaption>
+                  </figure>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
           </div>
 
         </div>
