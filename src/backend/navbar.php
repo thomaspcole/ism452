@@ -15,7 +15,7 @@
   <div class="collapse navbar-collapse" id="ccnav">
     <ul class="nav navbar-nav mr-auto">
       <!-- Navigation links -->
-      <li><a class="nav-item nav-link active" href="index.php">Home <i class="fas fa-home"></i><span class="sr-only">(current)</span></a></li>
+      <li><a class="nav-item nav-link" href="index.php">Home <i class="fas fa-home"></i><span class="sr-only">(current)</span></a></li>
       <li><a class="nav-item nav-link" href="products.php">Products <i class="fas fa-store"></i></a></li>
       <li><a class="nav-item nav-link" href="orders.php">Orders <i class="fas fa-shipping-fast"></i></a></li>
       <li><a class="nav-item nav-link" href="cart.php">Cart <i class="fas fa-shopping-cart"></i></a></li>
@@ -29,6 +29,14 @@
       $ls = new loginStatus;
       $ls->getLoginButton();
     ?>
+
+    <script type="text/javascript">
+      var path = $(location).attr('pathname');
+      path = path.replace('/', '');
+
+      var navLink = $('a[href="' + path +'"]');
+      $(navLink).addClass('active');
+    </script>
 
   </div>
 </nav>
