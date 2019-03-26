@@ -27,10 +27,10 @@ echo '<div class="card bg-light">
 
           <h6>Employee Management</h6>
           <hr>
-          <a class="btn btn-outline-primary btn-sm" href="#">NULL</a>
+          <a class="btn btn-outline-primary btn-sm" href="timeclock.php">Time clock</a>
           <br>
           <br>
-          <a class="btn btn-outline-primary btn-sm" href="#">NULL</a>
+          <a class="btn btn-outline-primary btn-sm" href="#">Employee manager</a>
           <br>
           <br>
 
