@@ -28,7 +28,7 @@
         include 'backend/db.php';
 
         $db = new db;
-        $sql="SELECT name,description,price FROM productTest";
+        $sql="SELECT * FROM productTest";
         $result = $db->queryDatabase($sql);
 
 
@@ -42,13 +42,14 @@
             }
 
             echo '<div class="card shadow" style="width: 18rem;">
-                    <img src="img/CardPlaceholder.png" class="card-img-top"></img>
-                    <div class="card-body">
-                      <h5>'.$row["name"].'</h5>
-                      <p>'.$row["description"].'</p>
-                      <p>$'.$row["price"].'</p>
-                    </div>
-                  </div>';
+                      <img src="img/CardPlaceholder.png" class="card-img-top"></img>
+                      <div class="card-body">
+                        <h5>'.$row["name"].'</h5>
+                        <p>'.$row["description"].'</p>
+                        <p>$'.$row["price"].'</p>
+                        <a class="btn btn-sm btn-light stretched-link" href="product.php?id='.$row["prod_id"].'">View</a>
+                      </div>
+                    </div>';
 
             if ($GLOBALS['counter'] == 3) {
               echo '</div></div><br>';
