@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/master.css">
     <link rel="icon" href="img/logoBlack.svg" type="image/svg" sizes="any">
+    <script src="js/cart.js"></script>
 
   </head>
 
   <body>
-
     <?php
     include 'backend/navbar.php';
+    include 'alert.php';
     ?>
 
-    <br>
+
     <div class="container-fluid shadow-lg p-3 mb-5 bg-light rounded">
 
         <!-- Product List -->
@@ -47,7 +48,8 @@
                         <h5>'.$row["name"].'</h5>
                         <p>'.$row["description"].'</p>
                         <p>$'.$row["price"].'</p>
-                        <a class="btn btn-sm btn-light stretched-link" href="product.php?id='.$row["prod_id"].'">View</a>
+                        <button class="btn btn-sm btn-light" onClick="addtoCart('.$row["prod_id"].')">Add to cart</button>
+                        <a class="btn btn-sm btn-light" href="product.php?id='.$row["prod_id"].'">View</a>
                       </div>
                     </div>';
 

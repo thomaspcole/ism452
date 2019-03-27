@@ -46,7 +46,6 @@
           $result = $dbConn->queryDatabase($sql);
 
           if ($result->num_rows > 0) {
-            $counter = 0;
             while($row = $result->fetch_assoc()) {
               echo '<tr>
                       <th scope="row">'.$row["order_id"].'</th>

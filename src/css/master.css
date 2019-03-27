@@ -6,6 +6,30 @@ canvas{
   border-radius: 10px;
 }
 
+
+#fadeOut{
+  animation: fadeOut 3s;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1}
+  25% {opacity: 1}
+  50% {opacity: 1}
+  75% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.alertContainer{
+  max-width: 20%;
+  position: absolute !important;
+  top: 15%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 100;
+  opacity: 0;
+}
+
 .navbar-custom{
   background-color: #b2b2b2;
 }
