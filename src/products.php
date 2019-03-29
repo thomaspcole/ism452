@@ -22,6 +22,41 @@
 
 
     <div class="container-fluid shadow-lg p-3 mb-5 bg-light rounded">
+      <div class="row">
+        <div class="col-1" style="text-align:center">
+          <h5>Sort By:</h5>
+        </div>
+        <div class="col-2 mx-auto" style="text-align:left">
+          <div class="dropdown">
+            Price:
+            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" id="priceFilter"></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item">High to Low</a>
+              <a class="dropdown-item">Low to High</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-2" style="text-align:left">
+          <div class="dropdown">
+            Rating:
+            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" id="ratingFilter"></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item">5 &#9733; &#9733; &#9733; &#9733; &#9733;</a>
+              <a class="dropdown-item">4 &#9733; &#9733; &#9733; &#9733; &#9734;</a>
+              <a class="dropdown-item">3 &#9733; &#9733; &#9733; &#9734; &#9734;</a>
+              <a class="dropdown-item">2 &#9733; &#9733; &#9734; &#9734; &#9734;</a>
+              <a class="dropdown-item">1 &#9733; &#9734; &#9734; &#9734; &#9734;</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
+      <script src="js/productFilter.js">
+
+      </script>
+      <br>
 
         <!-- Product List -->
         <?php
