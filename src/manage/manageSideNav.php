@@ -1,5 +1,4 @@
-<?php
-echo '<div class="card bg-light">
+<div class="card bg-light">
         <div class="card-body">
           <h6>Overview</h6>
           <hr>
@@ -35,5 +34,4 @@ echo '<div class="card bg-light">
           <br>
 
         </div>
-      </div>';
-?>
+      </div>
