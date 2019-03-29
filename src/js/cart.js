@@ -9,7 +9,7 @@ function addItemToCart(prodId){
   } else {
     this.setCookie(cookie, prodId, 1);
   }
-
+  this.getItemCount();
 }
 
 function getCart(){
@@ -23,6 +23,17 @@ function getCart(){
     }
   }
   return items;
+}
+
+function getItemCount(){
+  var cart = this.getCart();
+  var cartSize = cart.length;
+
+  if (cartSize == 0) {
+    $('#cartCount').html("");
+  } else {
+    $('#cartCount').html(cartSize + "");
+  }
 }
 
 function emptyCart(){
