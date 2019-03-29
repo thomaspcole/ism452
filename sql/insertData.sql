@@ -12,6 +12,20 @@ VALUES (
   "fakepass"
 );
 
+INSERT INTO Customer(last_name, first_name, phone_number, address, city, state, country, zip_code, cust_username, cust_password)
+VALUES (
+  "Doe",
+  "Jane",
+  0987654321,
+  "124 Main St.",
+  "Anywhere",
+  "North Carolina",
+  "US",
+  12345,
+  "janedoe",
+  "passfake"
+);
+
 INSERT INTO Employee(last_name, first_name, emp_username, emp_password)
 VALUES (
   "Person",
@@ -113,30 +127,34 @@ VALUES(
   89.99
 );
 
-INSERT INTO orderTest (description, quantity, price)
+INSERT INTO orderTest (description, quantity, price, customer_id)
 VALUES(
   "Test Order 1",
   1,
-  1.99
+  1.99,
+  1
 );
 
-INSERT INTO orderTest (description, quantity, price)
+INSERT INTO orderTest (description, quantity, price, customer_id)
 VALUES(
   "Test Order 2",
   3,
-  5.99
+  5.99,
+  2
 );
 
-INSERT INTO orderTest (description, quantity, price)
+INSERT INTO orderTest (description, quantity, price, customer_id)
 VALUES(
   "Test Order 3",
   5,
-  1.99
+  1.99,
+  1
 );
 
-INSERT INTO orderTest (description, quantity, price)
+INSERT INTO orderTest (description, quantity, price, customer_id)
 VALUES(
   "Test Order 4",
   1,
-  1.99
+  1.99,
+  2
 );

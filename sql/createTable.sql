@@ -37,5 +37,7 @@ CREATE TABLE orderTest (
   description varchar(100) NOT NULL,
   quantity int(10) NOT NULL,
   price decimal(8,2) NOT NULL,
-  PRIMARY KEY (order_id)
+  customer_id int,
+  PRIMARY KEY (order_id),
+  FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
 );

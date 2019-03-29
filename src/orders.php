@@ -42,7 +42,7 @@
           <?php
           include 'backend/db.php';
           $dbConn = new db;
-          $sql = "SELECT * FROM orderTest";
+          $sql = "SELECT * FROM orderTest WHERE customer_id = ".$_COOKIE['id'];
           $result = $dbConn->queryDatabase($sql);
 
           if ($result->num_rows > 0) {
