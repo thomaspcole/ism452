@@ -11,6 +11,9 @@
           <a class="btn btn-outline-primary btn-sm" href="inventory.php">Inventory</a>
           <br>
           <br>
+          <a class="btn btn-outline-primary btn-sm" href="productMgt.php">Product Management</a>
+          <br>
+          <br>
           <a class="btn btn-outline-primary btn-sm" href="shipping.php">Shipping/Receiving</a>
           <br>
           <br>
@@ -29,9 +32,15 @@
           <a class="btn btn-outline-primary btn-sm" href="timeclock.php">Time clock</a>
           <br>
           <br>
-          <a class="btn btn-outline-primary btn-sm" href="#">Employee manager</a>
-          <br>
-          <br>
+          <?php
+          if (isset($_COOKIE['mgt'])) {
+            echo
+            '<a class="btn btn-outline-primary btn-sm" href="#">Employee manager</a>
+            <br>
+            <br>';
+          }
+          ?>
+
 
         </div>
       </div>

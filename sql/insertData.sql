@@ -12,6 +12,23 @@ VALUES (
   "fakepass"
 );
 
+INSERT INTO Employee(last_name, first_name, emp_username, emp_password)
+VALUES (
+  "Person",
+  "Worker",
+  "wperson",
+  "123"
+);
+
+INSERT INTO Employee(last_name, first_name, emp_username, emp_password, is_manager)
+VALUES (
+  "No Name",
+  "Admin",
+  "admin",
+  "12345",
+  1
+);
+
 INSERT INTO productTest(name, description, price)
 VALUES(
   "Test Item 1",

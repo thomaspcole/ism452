@@ -114,25 +114,6 @@
           </form>
         </div>
       </div>
-
-      <br>
-
-      <div class="row">
-        <div class="col">
-          <h3>Operator Login</h3>
-          <br>
-          <!-- Operator login -->
-          <form action="backend/operatorLogin.php" method="post">
-            <div class="form-group">
-              <input type="text" class="form-control" name="loginUName" placeholder="Username" required>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" name="loginPass" placeholder="Password" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-          </form>
-        </div>
-      </div>
     </div>
 
 

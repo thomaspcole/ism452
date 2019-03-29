@@ -13,6 +13,17 @@ CREATE TABLE Customer (
   PRIMARY KEY(customer_id)
 );
 
+CREATE TABLE Employee(
+  employee_id int(10) NOT NULL AUTO_INCREMENT,
+  last_name varchar(25) NOT NULL,
+  first_name varchar(25) NOT NULL,
+  emp_username varchar(30) NOT NULL,
+  emp_password varchar(32) NOT NULL,
+  is_manager BOOLEAN NOT NULL default 0,
+  PRIMARY KEY(employee_id)
+);
+
+
 CREATE TABLE productTest (
   prod_id int(10) NOT NULL AUTO_INCREMENT,
   name varchar(25) NOT NULL,
