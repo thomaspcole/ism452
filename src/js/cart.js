@@ -12,6 +12,24 @@ function addItemToCart(prodId){
   this.getItemCount();
 }
 
+function addItem(prodId){
+  this.addItemToCart(prodId);
+  location.reload();
+}
+
+function removeItemFromCart(prodId){
+  var c = this.getCookie(cookie);
+  if(c != ""){
+    var items = c.split(',');
+    var index = items.indexOf(prodId.toString());
+    if(index > -1){
+      items.splice(index, 1);
+    }
+    this.setCookie(cookie, items, 1);
+  }
+  location.reload();
+}
+
 function getCart(){
   var c = this.getCookie(cookie);
   var items = [];

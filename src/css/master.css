@@ -6,6 +6,10 @@ canvas{
   border-radius: 10px;
 }
 
+table{
+  table-layout: fixed;
+}
+
 
 #fadeOut{
   animation: fadeOut 3s;

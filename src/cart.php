@@ -21,8 +21,6 @@
     ?>
     <br>
     <div class="container-fluid shadow-lg p-3 mb-5 bg-light rounded">
-      <button class="btn btn-danger" onclick="emptyCart()">EMPTY CART</button>
-      <br>
       <br>
 
       <?php
@@ -54,22 +52,43 @@
           echo '<tr>
                 <td></td>
                 <td align="right">Subtotal: </td>
-                <td>'.$sub.'</td>
+                <td>$'.$sub.'</td>
                 </tr>';
           echo '<tr>
                 <td></td>
                 <td align="right">Tax: </td>
-                <td>'.$tax.'</td>
+                <td>$'.$tax.'</td>
                 </tr>';
           echo '<tr>
                 <td></td>
                 <td align="right">Total: </td>
-                <td>'.$total.'</td>
+                <td>$'.number_format($total,2,'.','').'</td>
                 </tr>';
           echo '</tbody></table>';
+          echo '<div class="row">
+                  <div class="col-2">
+                    <button class="btn btn-danger" onclick="emptyCart()">EMPTY CART</button>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  <div class="col-4">
+                    <button class="btn btn-primary" name="button">Checkout</button>
+                  </div>
+                </div>';
         }
         else {
-          echo '<h5>Your cart is currently empty</h5>';
+          echo '
+          <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <h5 style="text-align: center">Your cart is currently empty</h5>
+            </div>
+            <div class="col">
+            </div>
+          </div>
+          ';
         }
 
 
@@ -82,8 +101,8 @@
                 $priceForUnit = $row["price"] * $qty;
                 echo '<tr>
                         <td>'.$row["name"].'</td>
-                        <td>'.$qty.'</td>
-                        <td>'.$priceForUnit.'</td>
+                        <td><button class="btn btn-light" name="button" onclick="addItem('.$item.')">+</button> '.$qty.' <button class="btn btn-light" name="button"  onclick="removeItemFromCart('.$item.')">-</button></td>
+                        <td>$'.$priceForUnit.'</td>
                       </tr>';
                 return $priceForUnit;
               }
