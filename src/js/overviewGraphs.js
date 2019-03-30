@@ -5,7 +5,7 @@ let inv = function(p){
 
   p.draw = function(){
     p.background(200);
-    p.invGraph = new barGraph(p, ['Ingredients', 'Boxes', 'Misc'], [10,96,50], 160, true, true);
+    p.invGraph = new barGraph(p, ['Flower', 'Milk', 'Eggs'], [10,96,50], 160, true, true);
     p.invGraph.display();
     p.noLoop();
   }

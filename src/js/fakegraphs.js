@@ -106,7 +106,7 @@ class timeClock{
 
     var s = this.p.map(this.p.second(), 0, 60, 0, this.p.TWO_PI) - this.p.HALF_PI;
     var m = this.p.map(this.p.minute() + this.p.norm(this.p.second(), 0, 60), 0, 60, 0, this.p.TWO_PI) - this.p.HALF_PI;
-    var h = this.p.map(this.p.hour() + this.p.norm(this.p.minute(), 0, 60), 0, 60, 0, this.p.TWO_PI * 2) - this.p.HALF_PI;
+    var h = this.p.map(this.p.hour() + this.p.norm(this.p.minute(), 0, 60), 0, 24, 0, this.p.TWO_PI * 2) - this.p.HALF_PI;
 
     //clock body
     this.p.noStroke();

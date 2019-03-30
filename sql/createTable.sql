@@ -41,3 +41,15 @@ CREATE TABLE orderTest (
   PRIMARY KEY (order_id),
   FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
 );
+
+CREATE TABLE invTest(
+  inv_id int(10) NOT NULL AUTO_INCREMENT,
+  name varchar(25) NOT NULL,
+  description varchar(100) NOT NULL,
+  quantity_on_hand int(10) NOT NULL,
+  quantity_reorder int(10) NOT NULL,
+  weight_unit varchar(20) NOT NULL,
+  supplier_id int NOT NULL,
+  price decimal(8,2) NOT NULL,
+  PRIMARY KEY (inv_id)
+);

@@ -158,3 +158,47 @@ VALUES(
   1.99,
   2
 );
+
+INSERT INTO invTest (name, description, quantity_on_hand, quantity_reorder, weight_unit, supplier_id, price)
+VALUES(
+  "Flower",
+  "Regular flower for baking.",
+  10,
+  5,
+  "lbs",
+  1,
+  5.99
+);
+
+INSERT INTO invTest (name, description, quantity_on_hand, quantity_reorder, weight_unit, supplier_id, price)
+VALUES(
+  "Sugar",
+  "Cane Sugar.",
+  20,
+  10,
+  "lbs",
+  1,
+  8.99
+);
+
+INSERT INTO invTest (name, description, quantity_on_hand, quantity_reorder, weight_unit, supplier_id, price)
+VALUES(
+  "Milk",
+  "2% Skim milk.",
+  15,
+  3,
+  "gal",
+  1,
+  4.99
+);
+
+INSERT INTO invTest (name, description, quantity_on_hand, quantity_reorder, weight_unit, supplier_id, price)
+VALUES(
+  "Eggs",
+  "Grade A eggs.",
+  36,
+  12,
+  "",
+  1,
+  6.99
+);

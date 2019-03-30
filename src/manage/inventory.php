@@ -38,14 +38,65 @@
 
         <div class="col-sm-10">
           <div class="container-fluid px-0 h-100 bg-light rounded" style="max-width:100% !important;">
-            <h5>Inventory</h5>
+            <div class="row">
+              <div class="col">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Inventory ID #</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Quantity On Hand</th>
+                      <th scope="col">Reorder Quantity</th>
+                      <th scope="col">Supplier ID #</th>
+                      <th scope="col">Price</th>
+                      <th scope="col"></th> <!--reorder-->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    include '../backend/db.php';
+
+                    $db = new db;
+                    $sql="SELECT * FROM invTest";
+                    $result = $db->queryDatabase($sql);
+
+
+                    if ($result->num_rows > 0) {
+                      while($row = $result->fetch_assoc()) {
+                        echo '
+                        <tr>
+                          <td>'.$row["inv_id"].'</td>
+                          <td>'.$row["name"].'</td>
+                          <td>'.$row["description"].'</td>
+                          <td>'.$row["quantity_on_hand"]. " " . $row["weight_unit"] .'</td>
+                          <td>'.$row["quantity_reorder"]. " " . $row["weight_unit"] .'</td>
+                          <td>'.$row["supplier_id"].'</td>
+                          <td>$'.$row["price"]. " " . $row["weight_unit"] .'</td>
+                          <td>
+                            <div class="dropdown">
+                              <button class="btn btn-secondary btn-sm dropdown-toggle" id="reorder-action" data-toggle="dropdown">Reorder Action</button>
+                              <div class="dropdown-menu">
+                                <button class="dropdown-item">Reorder Automatically</button>
+                                <button class="dropdown-item">Don\'t Reorder</button>
+                                <button class="dropdown-item">Reorder Now</button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        ';
+                      }
+                    }
+                    ?>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>
           </div>
-
         </div>
-
+        <br>
       </div>
-      <br>
-    </div>
-
   </body>
 </html>

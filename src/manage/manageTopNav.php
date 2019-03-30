@@ -12,6 +12,12 @@
   </ul>
 
   <ul class="nav navbar-nav ml-auto">
-    <li><a class="btn btn-info navbar-btn" href="../backend/logout.php">Logout <i class="fas fa-sign-in-alt"></i></a></li>
+    <li><a class="btn btn-info navbar-btn" href="../backend/logout.php" data-toggle="tooltip" data-placement="bottom" title="Logout">Welcome <?php echo $_COOKIE["emp"]; ?> <i class="fas fa-sign-in-alt"></i></a></li>
   </ul>
 </nav>
+
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+</script>

@@ -39,6 +39,11 @@
       var navLink = $('a[href="' + path +'"]');
       $(navLink).addClass('active');
 
+      //enable logout toottip
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+
       getItemCount();
     </script>
 
