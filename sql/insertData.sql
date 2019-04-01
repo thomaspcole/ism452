@@ -162,7 +162,7 @@ VALUES(
 INSERT INTO invTest (name, description, quantity_on_hand, quantity_reorder, weight_unit, supplier_id, price)
 VALUES(
   "Flour",
-  "Regular flower for baking.",
+  "Regular flour for baking.",
   10,
   5,
   "lbs",
