@@ -29,6 +29,7 @@ CREATE TABLE productTest (
   name varchar(25) NOT NULL,
   description varchar(100) NOT NULL,
   price decimal(8,2) NOT NULL,
+  is_live BOOLEAN NOT NULL default 1,
   PRIMARY KEY (prod_id)
 );
 

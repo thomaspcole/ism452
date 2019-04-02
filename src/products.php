@@ -72,27 +72,30 @@
           $counter = 0;
           while($row = $result->fetch_assoc()) {
 
-            if ($GLOBALS['counter'] == 0) {
-              echo '<div class="row">
-                      <div class="card-deck mx-auto">';
-            }
+            //only draw a card if the product is live
+            if ($row["is_live"] == true) {
+              if ($GLOBALS['counter'] == 0) {
+                echo '<div class="row">
+                        <div class="card-deck mx-auto">';
+              }
 
-            echo '<div class="card shadow" style="width: 18rem;">
-                      <img src="img/CardPlaceholder.png" class="card-img-top"></img>
-                      <div class="card-body">
-                        <h5>'.$row["name"].'</h5>
-                        <p>'.$row["description"].'</p>
-                        <p>$'.$row["price"].'</p>
-                        <button class="btn btn-sm btn-light" onClick="addtoCart('.$row["prod_id"].')">Add to cart</button>
-                        <a class="btn btn-sm btn-light" href="product.php?id='.$row["prod_id"].'">View</a>
-                      </div>
-                    </div>';
+              echo '<div class="card shadow" style="width: 18rem;">
+                        <img src="img/CardPlaceholder.png" class="card-img-top"></img>
+                        <div class="card-body">
+                          <h5>'.$row["name"].'</h5>
+                          <p>'.$row["description"].'</p>
+                          <p>$'.$row["price"].'</p>
+                          <button class="btn btn-sm btn-light" onClick="addtoCart('.$row["prod_id"].')">Add to cart</button>
+                          <a class="btn btn-sm btn-light" href="product.php?id='.$row["prod_id"].'">View</a>
+                        </div>
+                      </div>';
 
-            if ($GLOBALS['counter'] == 3) {
-              echo '</div></div><br>';
-              $GLOBALS['counter'] = 0;
-            } else {
-              $GLOBALS['counter'] +=1;
+              if ($GLOBALS['counter'] == 3) {
+                echo '</div></div><br>';
+                $GLOBALS['counter'] = 0;
+              } else {
+                $GLOBALS['counter'] +=1;
+              }
             }
           }
         }

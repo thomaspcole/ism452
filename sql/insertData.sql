@@ -43,11 +43,12 @@ VALUES (
   1
 );
 
-INSERT INTO productTest(name, description, price)
+INSERT INTO productTest(name, description, price, is_live)
 VALUES(
   "Test Item 1",
   "This is a fake item. It is not for sale.",
-  2.99
+  2.99,
+  0
 );
 
 INSERT INTO productTest (name, description, price)
