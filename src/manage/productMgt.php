@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/master.css">
     <link rel="icon" href="img/logoBlack.svg" type="image/svg" sizes="any">
+    <script src="../js/updateProductList.js"></script>
 
   </head>
   <body>
@@ -74,7 +75,7 @@
                                 <span class="slider round"></span>
                               </label>
                             </td>
-                            <td></td>
+                            <td><button class="btn btn-danger removeItemBtn">Remove this item.</button></td>
                           </tr>
                           ';
                         }
@@ -86,17 +87,18 @@
               </div>
             </div>
             <div class="row">
-              <div class="col">
-
-              </div>
-              <div class="col-2">
-                <button class="btn btn-success" id="saveBtn">Save Changes</button>
-                <script src="../js/updateProductList.js"></script>
+              <div class="col"></div>
+              <div class="col-3">
+                <div class="button-group" role="group">
+                  <button class="btn btn-primary" id="addItemBtn">Add Product</button>
+                  <button class="btn btn-success" id="saveBtn">Save Changes</button>
+                </div>
               </div>
             </div>
             <br>
           </div>
         </div>
+        <br>
       </div>
       <br>
     </div>

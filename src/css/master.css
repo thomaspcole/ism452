@@ -75,7 +75,7 @@ table{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #ee1111;
   transition: .4s;
 }
 
@@ -91,11 +91,11 @@ table{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #00a300;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #00a300;
 }
 
 input:checked + .slider:before {

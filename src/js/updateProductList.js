@@ -27,14 +27,31 @@ function getChangedProducts(){
   return toUpdate;
 }
 
-$("#saveBtn").click(function(){
-  var updateArr = getChangedProducts();
-  console.log(updateArr);
+$(document).ready(function(){
+  $("#saveBtn").click(function(){
+    var updateArr = getChangedProducts();
+    console.log(updateArr);
 
-  console.log("Save Clicked");
-  $.get('../backend/updateProduct.php', {"ids[]": updateArr}).done(function(data, status){
-    //alert("Data: " + data + "\nStatus: " + status);
-    console.log(data);
-    location.reload();
+    console.log("Save Clicked");
+    $.get('../backend/updateProduct.php', {"ids[]": updateArr}).done(function(data, status){
+      //alert("Data: " + data + "\nStatus: " + status);
+      //console.log(data);
+      location.reload();
+    });
   });
-})
+
+  $("#addItemBtn").click(function(){
+    console.log("Add clicked");
+  });
+
+  $(".removeItemBtn").click(function(){
+    var yesNo = confirm("Are you sure you wish to remove this item?")
+    if(yesNo == true){
+      var rmItem = this.parentElement.parentElement.childNodes[1].innerHTML;
+      $.get('../backend/removeProduct.php', {"id": rmItem}).done(function(data, status){
+        //console.log(data);
+        location.reload();
+      });
+    }  
+  });
+});
