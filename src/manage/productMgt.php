@@ -24,6 +24,29 @@
       include 'manageTopNav.php';
     ?>
 
+    <div hidden class="prodMgtForm container bg-dark rounded" id="addForm">
+      <br>
+      <div class="card">
+        <div class="card-body" id="addContent">
+          <h5>Name</h5>
+          <input type="text" id="prodName">
+          <br>
+          <br>
+          <h5>Description</h5>
+          <input type="text" id="prodDesc">
+          <br>
+          <br>
+          <h5>Price</h5>
+          <input type="text" id="prodPrice">
+          <br>
+          <br>
+          <button class="btn btn-danger" id="cancelProd">Cancel</button>
+          <button class="btn btn-success" id="saveProd">Save</button>
+        </div>
+      </div>
+      <br>
+    </div>
+
     <br>
     <div class="container-fluid bg-dark rounded" style="max-width:95% !important;">
       <br>

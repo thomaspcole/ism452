@@ -10,6 +10,17 @@ table{
   table-layout: fixed;
 }
 
+/* ProductManagement Forms */
+.prodMgtForm{
+  z-index: 100;
+  position: absolute;
+  width: 50%;
+  height: auto;
+  left: 25%;
+  top: 25%;
+  margin: auto;
+}
+
 /* Animation for alert */
 #fadeOut{
   animation: fadeOut 3s;

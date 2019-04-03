@@ -27,7 +27,18 @@ function getChangedProducts(){
   return toUpdate;
 }
 
+function clearAddForm(){
+  $("#prodName").val('');
+  $("#prodDesc").val('');
+  $("#prodPrice").val('');
+  $("#prodCheck").prop('checked', false);
+  $("#formAlert").hide();
+}
+
 $(document).ready(function(){
+
+  form = $("#addForm");
+
   $("#saveBtn").click(function(){
     var updateArr = getChangedProducts();
     console.log(updateArr);
@@ -42,6 +53,29 @@ $(document).ready(function(){
 
   $("#addItemBtn").click(function(){
     console.log("Add clicked");
+    form.removeAttr("hidden");
+  });
+
+  $("#saveProd").click(function(){
+    var pn = $("#prodName").val();
+    var pd = $("#prodDesc").val();
+    var pp = $("#prodPrice").val();
+
+    if(pn == "" || pd == "" || pp == ""){
+      $("#addContent").prepend("<p id=\"formAlert\">Please fill in all options</p>");
+    } else {
+      $.get('../backend/addItem.php', {"name": pn, "desc": pd, "price": pp}).done(function(data,status){
+        //alert(""+ data + status);
+        location.reload();
+      });
+      form.attr("hidden", true);
+      clearAddForm();
+    }
+  });
+
+  $("#cancelProd").click(function(){
+    form.attr("hidden", true);
+    clearAddForm();
   });
 
   $(".removeItemBtn").click(function(){
@@ -52,6 +86,6 @@ $(document).ready(function(){
         //console.log(data);
         location.reload();
       });
-    }  
+    }
   });
 });
