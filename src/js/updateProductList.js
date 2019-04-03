@@ -35,9 +35,18 @@ function clearAddForm(){
   $("#formAlert").hide();
 }
 
+function clearEditForm(){
+  $("#prodName").val('');
+  $("#prodDesc").val('');
+  $("#prodPrice").val('');
+  $("#prodCheck").prop('checked', false);
+  $("#formAlert").hide();
+}
+
 $(document).ready(function(){
 
-  form = $("#addForm");
+  addItemForm = $("#addForm");
+  editItemForm = $("#editForm");
 
   $("#saveBtn").click(function(){
     var updateArr = getChangedProducts();
@@ -45,15 +54,13 @@ $(document).ready(function(){
 
     console.log("Save Clicked");
     $.get('../backend/updateProduct.php', {"ids[]": updateArr}).done(function(data, status){
-      //alert("Data: " + data + "\nStatus: " + status);
-      //console.log(data);
       location.reload();
     });
   });
 
   $("#addItemBtn").click(function(){
     console.log("Add clicked");
-    form.removeAttr("hidden");
+    addItemForm.removeAttr("hidden");
   });
 
   $("#saveProd").click(function(){
@@ -68,14 +75,33 @@ $(document).ready(function(){
         //alert(""+ data + status);
         location.reload();
       });
-      form.attr("hidden", true);
+      addItemForm.attr("hidden", true);
       clearAddForm();
     }
   });
 
   $("#cancelProd").click(function(){
-    form.attr("hidden", true);
+    addItemForm.attr("hidden", true);
     clearAddForm();
+  });
+
+  $("#saveEdit").click(function(){
+    var en = $("#editProdName").val();
+    var ed = $("#editProdDesc").val();
+    var ep = $("#editProdPrice").val();
+
+    if(en == "" || ed == "" | ep == ""){
+      $("#editContent").prepend("<p id=\"formAlert\">Please fill in all options</p>");
+    } else {
+      //$.get();
+      editItemForm.attr("hidden", true);
+      clearEditForm();
+    }
+  });
+
+  $("#cancelEdit").click(function(){
+    editItemForm.attr("hidden", true);
+    clearEditForm();
   });
 
   $(".removeItemBtn").click(function(){

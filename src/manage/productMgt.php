@@ -47,6 +47,28 @@
       <br>
     </div>
 
+    <div hidden class="prodMgtForm container bg-dark rounded" id="editForm">
+      <br>
+      <div class="card">
+        <div class="card-body" id="editContent">
+          <h5>Name</h5>
+          <input type="text" id="editProdName">
+          <br>
+          <br>
+          <h5>Description</h5>
+          <input type="text" id="editProdDesc">
+          <br>
+          <br>
+          <h5>Price</h5>
+          <input type="text" id="editProdPrice">
+          <br>
+          <br>
+          <button class="btn btn-danger" id="cancelEdit">Cancel</button>
+          <button class="btn btn-success" id="saveEdit">Save</button>
+        </div>
+      </div>
+    </div>
+
     <br>
     <div class="container-fluid bg-dark rounded" style="max-width:95% !important;">
       <br>
@@ -66,6 +88,7 @@
                       <th scope="col">Name</th>
                       <th scope="col">Price</th>
                       <th scope="col">Viewable</th>
+                      <th scope="col">Edit Item</th>
                       <th scope="col">Remove Item</th>
                     </tr>
                   </thead>
@@ -98,7 +121,8 @@
                                 <span class="slider round"></span>
                               </label>
                             </td>
-                            <td><button class="btn btn-danger removeItemBtn">Remove this item.</button></td>
+                            <td><button class="btn btn-primary btn-sm">Edit this item.</button></td>
+                            <td><button class="btn btn-danger btn-sm removeItemBtn">Remove this item.</button></td>
                           </tr>
                           ';
                         }
