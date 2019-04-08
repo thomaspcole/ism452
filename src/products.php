@@ -22,36 +22,46 @@
 
 
     <div class="container-fluid shadow-lg p-3 mb-5 bg-light rounded">
-      <div class="row">
-        <div class="col-1" style="text-align:center">
-          <h5>Sort By:</h5>
-        </div>
-        <div class="col-2 mx-auto" style="text-align:left">
+      <div class="row mx-auto" style="width:60%; text-align: center">
           <div class="dropdown">
             Price:
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" id="priceFilter"></button>
             <div class="dropdown-menu">
-              <a class="dropdown-item">High to Low</a>
-              <a class="dropdown-item">Low to High</a>
+              <a class="dropdown-item" id="lh">Low to High</a>
+              <a class="dropdown-item" id="hl">High to Low</a>
             </div>
           </div>
-        </div>
-        <div class="col-2" style="text-align:left">
+          &nbsp;
+          &nbsp;
+          &nbsp;
           <div class="dropdown">
             Rating:
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" id="ratingFilter"></button>
             <div class="dropdown-menu">
-              <a class="dropdown-item">5 &#9733; &#9733; &#9733; &#9733; &#9733;</a>
-              <a class="dropdown-item">4 &#9733; &#9733; &#9733; &#9733; &#9734;</a>
-              <a class="dropdown-item">3 &#9733; &#9733; &#9733; &#9734; &#9734;</a>
-              <a class="dropdown-item">2 &#9733; &#9733; &#9734; &#9734; &#9734;</a>
-              <a class="dropdown-item">1 &#9733; &#9734; &#9734; &#9734; &#9734;</a>
+              <a class="dropdown-item" id="5s">5 &#9733; &#9733; &#9733; &#9733; &#9733;</a>
+              <a class="dropdown-item" id="4s">4 &#9733; &#9733; &#9733; &#9733; &#9734;</a>
+              <a class="dropdown-item" id="3s">3 &#9733; &#9733; &#9733; &#9734; &#9734;</a>
+              <a class="dropdown-item" id="2s">2 &#9733; &#9733; &#9734; &#9734; &#9734;</a>
+              <a class="dropdown-item" id="1s">1 &#9733; &#9734; &#9734; &#9734; &#9734;</a>
             </div>
           </div>
-        </div>
-        <div class="col">
-
-        </div>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <div class="dropdown">
+            Flavor:
+            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" id="flavorFilter"></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" id="all">All</a>
+              <a class="dropdown-item" id="chocolate">Chocolate</a>
+              <a class="dropdown-item" id="vanillia">Vanillia</a>
+              <a class="dropdown-item" id="red">Red Velvet</a>
+            </div>
+          </div>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <input class="form-control" type="text" placeholder="Search" style="width:200px">
       </div>
       <script src="js/productFilter.js">
 
@@ -64,7 +74,7 @@
         include 'backend/db.php';
 
         $db = new db;
-        $sql="SELECT * FROM productTest";
+        $sql="SELECT * FROM productTest ORDER BY price ASC";
         $result = $db->queryDatabase($sql);
 
 

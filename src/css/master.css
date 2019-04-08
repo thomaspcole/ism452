@@ -37,12 +37,13 @@ table{
 .alertContainer{
   max-width: 20%;
   position: absolute !important;
-  top: 15%;
+  top: 20%;
   right: 0;
   left: 0;
   margin: auto;
   z-index: 100;
   opacity: 0;
+  pointer-events: none;
 }
 
 /* Tweak bootstrap */
@@ -62,6 +63,10 @@ table{
 
 .carousel-item{
   max-height: 400px;
+}
+
+.dropdown-toggle{
+  width:150px !important;
 }
 
 

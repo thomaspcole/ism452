@@ -12,11 +12,10 @@ $(document).ready(function(){
 $('.dropdown-menu > a').click(function(e){
     var x = this.innerHTML;
     var id = this.parentElement.parentElement.childNodes[1].id;
-    //console.log(id, x);
+    //console.log(id, x, this.id);
     $("#"+id).text(x);
 });
 
-
 function reloadWithFilter(filter){
-  window.location.href = "/products.php?" + filter
+  window.location.href = "/products.php?filter=" + filter
 }
