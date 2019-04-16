@@ -5,11 +5,28 @@
     public function getLoginButton(){
       if(isset($_COOKIE["user"])){
         echo '<ul class="nav navbar-nav navbar-right">
-                <li><a class="btn btn-success navbar-btn" href="backend/logout.php" data-toggle="tooltip" data-placement="bottom" title="Logout">Welcome ' . $_COOKIE["user"] . ' <i class="fas fa-user"></i></a></li>
+                <li class="dropdown" id="navbarDropdown">
+                  <a class="btn btn-success navbar-btn dropdown-toggle"  id="navDropdown" href="#" data-toggle="dropdown">
+                    Welcome ' . $_COOKIE["user"] . ' <i class="fas fa-user"></i>
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">User Settings</a>
+                    <a class="dropdown-item" href="backend/logout.php">Logout</a>
+                  </div>
+                </li>
               </ul>';
       } else if (isset($_COOKIE["emp"])) {
         echo '<ul class="nav navbar-nav navbar-right">
-                <li><a class="btn btn-info navbar-btn" href="backend/logout.php" data-toggle="tooltip" data-placement="bottom" title="Logout">Welcome ' . $_COOKIE["emp"] . ' <i class="fas fa-user"></i></a></li>
+                <li class="dropdown" id="navbarDropdown">
+                  <a class="btn btn-info navbar-btn dropdown-toggle" id="navDropdown" href="#" data-toggle="dropdown">
+                    Welcome ' . $_COOKIE["emp"] . ' <i class="fas fa-user"></i>
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">User Settings</a>
+                    <a class="dropdown-item" href="manage/manage.php">Manage</a>
+                    <a class="dropdown-item" href="backend/logout.php">Logout</a>
+                  </div>
+                </li>
               </ul>';
       } else {
         echo '<ul class="nav navbar-nav navbar-right">

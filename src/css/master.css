@@ -10,6 +10,10 @@ table{
   table-layout: fixed;
 }
 
+#navDropdown{
+  width: 100% !important;
+}
+
 /* ProductManagement Forms */
 .prodMgtForm{
   z-index: 100;

@@ -2,6 +2,9 @@ $(document).ready(function(){
   var x = $('.dropdown');
 
   for (var i = 0; i < x.length; i++) {
+    if(x[i].id == "navbarDropdown"){
+      continue;
+    }
     var dropdownItem = x[i].childNodes[3].childNodes[1].text;
     console.log(x[i], dropdownItem);
     var id= x[i].childNodes[1].id
